@@ -88,10 +88,14 @@ body {
 	}
 
 	p {
-		color: #777;
 		// margin: 10px 0;
 		line-height: 140%;
+
+		span{
+			color: blue;
+		}
 	}
+
 
 	p.github {
 		font-size: 0.8em;
@@ -99,7 +103,7 @@ body {
 		a {
 			opacity: 0.2;
 			transition: 0.3s;
-
+			
 			&:hover {
 				opacity: 1;
 				color: red;
@@ -115,3 +119,4 @@ body {
 		opacity: 0.2;
 	}
 }
+

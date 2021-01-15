@@ -87,6 +87,10 @@ body {
 	line-height: 140%;
 }
 
+.tooltip{
+	color: blue;
+}
+
 .floating-box p.github {
 	font-size: 0.8em;
 }
