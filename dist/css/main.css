@@ -118,7 +118,7 @@ body {
 	border: 1.3em #fff solid;
 	border-radius: 4.2em;
 	height: 30em;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #00d40e, #23a6d5, #23d5ab, #007185);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	display: flex;
@@ -199,27 +199,27 @@ body {
 	0%,
 	100% {
 		-moz-transform: scaleY(1);
-		background: #03A9F4;
+		background: #00d40e;
 	}
 	16.67% {
 		-moz-transform: scaleY(3);
-		background: #FF5722;
+		background: #009658;
 	}
 	33.33% {
 		-moz-transform: scaleY(1);
-		background: #FF5252;
+		background: #007185;
 	}
 	50% {
 		-moz-transform: scaleY(3);
-		background: #E91E63;
+		background: #0053a8;
 	}
 	66.67% {
 		-moz-transform: scaleY(1);
-		background: #9C27B0;
+		background: #003193;
 	}
 	83.34% {
 		-moz-transform: scaleY(3);
-		background: #673AB7;
+		background: #007185;
 	}
 } 
 
@@ -227,27 +227,27 @@ body {
 	0%,
 	100% {
 		-webkit-transform: scaleY(1);
-		background: #03A9F4;
+		background: #00d40e;
 	}
 	16.67% {
 		-webkit-transform: scaleY(3);
-		background: #FF5722;
+		background: #009658;
 	}
 	33.33% {
 		-webkit-transform: scaleY(1);
-		background: #FF5252;
+		background: #007185;
 	}
 	50% {
 		-webkit-transform: scaleY(3);
-		background: #E91E63;
+		background: #0053a8;
 	}
 	66.67% {
 		-webkit-transform: scaleY(1);
-		background: #9C27B0;
+		background: #003193;
 	}
 	83.34% {
 		-webkit-transform: scaleY(3);
-		background: #673AB7;
+		background: #007185;
 	}
 } 
 
@@ -255,26 +255,26 @@ body {
 	0%,
 	100% {
 		transform: scaleY(1);
-		background: #03A9F4;
+		background: #00d40e;
 	}
 	16.67% {
 		transform: scaleY(3);
-		background: #FF5722;
+		background: #009658;
 	}
 	33.33% {
 		transform: scaleY(1);
-		background: #FF5252;
+		background: #007185;
 	}
 	50% {
 		transform: scaleY(3);
-		background: #E91E63;
+		background: #0053a8;
 	}
 	66.67% {
 		transform: scaleY(1);
-		background: #9C27B0;
+		background: #003193;
 	}
 	83.34% {
 		transform: scaleY(3);
-		background: #673AB7;
+		background: #007185;
 	}
 } 
