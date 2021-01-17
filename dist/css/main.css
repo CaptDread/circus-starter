@@ -86,17 +86,47 @@ body {
 	color: #777;
 	line-height: 140%;
 }
-.tipDiv p{
-	color: #fff;
-}
 
 .tooltip{
 	color: #f35626;
+	text-decoration: dotted;
 	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-webkit-animation: hue 10s infinite linear;
 }
+
+
+
+.tipDiv{
+	position: absolute;
+    background: #646464;
+    border-radius:4px;
+	padding: 6px 12px;
+	z-index: 4;
+    /* font-family: arial; */
+    font-size: 12px;
+	text-shadow: 0px 1px 1px #000;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.tipDiv:before {
+	content : " ";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #646464;
+    position:absolute;
+	bottom:-5px;
+}
+
+
+
 
 @-webkit-keyframes hue {
 	from {
