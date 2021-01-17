@@ -20,7 +20,7 @@ If you want to add partials, use Sass Modules via @use:
 Usage: partial-name.variable/mixin/function-name:
 background: variables.$primary-color;
 */
-/* @use 'reset'; */
+@use 'reset';
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
@@ -62,19 +62,19 @@ body {
 	transform: translateX(-30px) perspective(600px) rotateY(-15deg);
 }
 
-.floating-box .dreadlogo {
+.floating-box .logo {
 	position: absolute;
 	top: -30px;
-	width: 80px;
+	width: 60px;
 	z-index: 2;
 	transform: translateZ(100px);
 	transition: 0.3s;
 }
 
-/* .floating-box .logo:hover {
+.floating-box .logo:hover {
 	-ms-transform: rotate(-0.4turn);
 	    transform: rotate(-0.4turn);
-} */
+}
 
 .floating-box h1 {
 	font-weight: 700;
@@ -83,30 +83,12 @@ body {
 }
 
 .floating-box p {
-	color: #777;
 	line-height: 140%;
 }
-.tipDiv p{
-	color: #fff;
-}
 
-.tooltip{
-	color: #f35626;
-	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: hue 10s infinite linear;
+.floating-box p span {
+	color: blue;
 }
-
-@-webkit-keyframes hue {
-	from {
-	  -webkit-filter: hue-rotate(0deg);
-	}
-	to {
-	  -webkit-filter: hue-rotate(-360deg);
-	}
-  }
-  
 
 .floating-box p.github {
 	font-size: 0.8em;
