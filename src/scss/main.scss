@@ -24,6 +24,8 @@ background: variables.$primary-color;
 */
 
 @use 'reset';
+@use 'variables';
+@use 'mixins';
 
 /* 1. Main Layout ================================= */
 
@@ -39,9 +41,84 @@ body {
 
 /* 2. Content ================================= */
 
+$primary-color: #660099;
+$secondary-color: #666 ;
+$auxilary-color: #efc501;
+
+$primary-text: #000;
+$secondary-text: #666;
+
 .headbar{
 	background-color: #fff;
-	height: 4.2em;
+	height: fit-content;
+	display: flex;
+	margin: -4.2px -5px;
+	display: flex;
+	flex-direction: column;
+
+	.headContent{
+		display: flex;
+		justify-content: space-between;
+		flex: 3;
+
+
+		.headLogo{
+			display: flex;
+			padding: 0px 1.3em;
+			width: 33.3%;
+			justify-content: space-between;
+
+			.logoLink{
+	
+				.dreadlogo{
+					width: 4.2em;
+					height: 4.2em;
+				}
+			}
+		}
+		.cartDiv{
+			width: 33.3%;
+			display: flex;
+			
+			img{
+				width: 2.5em;
+				height: 2.5em;
+			}
+
+			.cartButt{
+				display: flex;
+
+			}
+		}
+		.nav{
+			width: 33.3%;
+			.hide-small{
+				display: none;
+			}
+			.daburger{
+				width: 2.5em;
+				height: 2.5em;
+				background-color: #fff;
+				border: .0013em rgba(0, 0, 0, .3) solid;
+				z-index: 2;
+				align-items: center;
+				position: relative;
+				top: 14.8%;
+    			left: 0%;
+
+				div{
+					padding: 1%;
+					margin: 10% auto;
+					background-color: #202529;
+					border: .013em #202529 solid;
+					width: 55%;
+				}
+				.topbun{
+					margin-top: 30%;
+				}
+			}
+		}
+	}
 
 	.colorbar{
 		height: .42em;
@@ -49,7 +126,8 @@ body {
 		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 		background-size: 400% 400%;
 		animation: gradient 15s ease infinite;
-		
+		display: inline-block;
+		margin-top: auto;
 	}
 }
 

@@ -12,7 +12,40 @@
 
 	<body>
 		<header class="headbar">
+			<div class="headContent">
+				<div class="headLogo">
+					<h1>Dreadscape.io</h1>
+					<a class="logoLink" href="">
+						<img class="dreadlogo" src="src/js/dreadScript/logoOpen.png">
+					</a>
+				</div>
+				<div class="cartDiv">
+					<div class="searchButt">
+						<img class='search' src="src/img/icon-magnifying-glass.svg" alt="Search">
+					</div>
+					<div id="close" class="cartButt">
+						<img class="cart" src="src/img/icon-shopping-cart.svg" alt="Your Cart">
+						<div class="cartCount"><p class="cartTotal">0</p></div>
+					</div>
+				</div>
+				<div class="nav">
+					<nav class="hide-small">
+						<ul>
+							<li><a href="index.html">home</a></li>
+							<li><a class="activeButt" href="">store</a></li>
+							<li><a href="">about</a></li>
+							<li><a href="">blog</a></li>
+							<li><a href="">contact</a></li>
+						</ul>
+					</nav>
+					<a id='close' class='daburger hide-large' href="">
+						<div class='topbun'></div>
+						<div class='dagoods'></div>
+						<div class='botbun'></div>
+					</a>
+				</div>
 
+			</div>
 			<div class="colorbar"></div>
 		</header>
 
@@ -27,6 +60,8 @@
 		<footer>
 
 		</footer>
+
+		<script src="src/js/dreadScript/logo.js"></script>
 		<script src="dist/js/main.js"></script>
 	</body>
 </html>

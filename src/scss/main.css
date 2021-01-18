@@ -21,6 +21,8 @@ Usage: partial-name.variable/mixin/function-name:
 background: variables.$primary-color;
 */
 @use 'reset';
+@use 'variables';
+@use 'mixins';
 /* 1. Main Layout ================================= */
 body {
 	background: #2e3032;
@@ -34,14 +36,87 @@ body {
 /* 2. Content ================================= */
 .headbar {
 	background-color: #fff;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	display: flex;
+	margin: -4.2px -5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.headbar .headContent {
+	display: flex;
+	justify-content: space-between;
+	flex: 3;
+}
+
+.headbar .headContent .headLogo {
+	display: flex;
+	padding: 0px 1.3em;
+	width: 33.3%;
+	justify-content: space-between;
+}
+
+.headbar .headContent .headLogo .logoLink .dreadlogo {
+	width: 4.2em;
 	height: 4.2em;
+}
+
+.headbar .headContent .cartDiv {
+	width: 33.3%;
+	display: flex;
+}
+
+.headbar .headContent .cartDiv img {
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.headbar .headContent .cartDiv .cartButt {
+	display: flex;
+}
+
+.headbar .headContent .nav {
+	width: 33.3%;
+}
+
+.headbar .headContent .nav .hide-small {
+	display: none;
+}
+
+.headbar .headContent .nav .daburger {
+	width: 2.5em;
+	height: 2.5em;
+	background-color: #fff;
+	border: 0.0013em rgba(0, 0, 0, 0.3) solid;
+	z-index: 2;
+	align-items: center;
+	position: relative;
+	top: 14.8%;
+	left: 0%;
+}
+
+.headbar .headContent .nav .daburger div {
+	padding: 1%;
+	margin: 10% auto;
+	background-color: #202529;
+	border: .013em #202529 solid;
+	width: 55%;
+}
+
+.headbar .headContent .nav .daburger .topbun {
+	margin-top: 30%;
 }
 
 .headbar .colorbar {
 	height: .42em;
+	width: 100%;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+	display: inline-block;
+	margin-top: auto;
 }
 
 @keyframes gradient {
