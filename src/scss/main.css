@@ -12,9 +12,7 @@ TABLE OF CONTENTS:
 
 ==============================================
 */
-
 /* 0. Reset ================================= */
-
 /* 
 If you want to add partials, use Sass Modules via @use:
 @use 'variables';
@@ -22,39 +20,30 @@ If you want to add partials, use Sass Modules via @use:
 Usage: partial-name.variable/mixin/function-name:
 background: variables.$primary-color;
 */
-
 @use 'reset';
-
 /* 1. Main Layout ================================= */
-
-
 body {
-	background: rgb(46, 48, 50);
+	background: #2e3032;
 }
 
-.wrap{
+.wrap {
 	background-color: #fff;
 	margin: 0% 15%;
 }
 
 /* 2. Content ================================= */
-
-.headbar{
+.headbar {
 	background-color: #fff;
 	height: 4.2em;
-
-	.colorbar{
-		height: .42em;
-		width: 100%;
-		background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-		background-size: 400% 400%;
-		animation: gradient 15s ease infinite;
-		
-	}
 }
 
+.headbar .colorbar {
+	height: .42em;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
 
-// gradient
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -67,3 +56,4 @@ body {
 	}
 }
 
+/*# sourceMappingURL=main.css.map */
