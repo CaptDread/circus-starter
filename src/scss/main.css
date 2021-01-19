@@ -174,13 +174,13 @@ body {
 
 .options .choices {
 	display: flex;
+	flex-direction: column;
 }
 
 .options .choices .option {
 	background-color: #fff;
 	border: 0.13em #660099 solid;
-	width: 33.3%;
-	height: 13em;
+	height: 42em;
 }
 
 @keyframes gradient {

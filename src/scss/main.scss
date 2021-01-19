@@ -191,12 +191,19 @@ $secondary-text: #666;
 	}
 	.choices{
 		display: flex;
+		flex-direction: column;
 
 		.option{
 			background-color: $auxilary-color;
 			border: .13em $primary-color solid;
-			width: 33.3%;
 			height: 13em;
+			display: flex;
+			flex-direction: column;
+
+
+			.optButt(
+				margin-top: auto;
+			)
 		}
 	}
 }
