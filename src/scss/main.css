@@ -58,7 +58,12 @@ body {
 	justify-content: space-between;
 }
 
+.headbar .headContent .headLogo .logoLink {
+	padding-top: .42em;
+}
+
 .headbar .headContent .headLogo .logoLink .dreadlogo {
+	margin-left: 1.3em;
 	width: 4.2em;
 	height: 4.2em;
 }
@@ -66,19 +71,36 @@ body {
 .headbar .headContent .cartDiv {
 	width: 33.3%;
 	display: flex;
+	margin-left: auto;
+	justify-items: right;
+	align-items: center;
+	padding-top: 1.3em;
 }
 
 .headbar .headContent .cartDiv img {
-	width: 2.5em;
-	height: 2.5em;
+	width: 3em;
+	height: 3em;
 }
 
-.headbar .headContent .cartDiv .cartButt {
+.headbar .headContent .cartDiv .headButt {
+	display: flex;
+	margin-left: auto;
+}
+
+.headbar .headContent .cartDiv .headButt .cartButt {
 	display: flex;
 }
 
+.headbar .headContent .cartDiv .headButt .cartButt .cartCount {
+	margin-left: -42%;
+	margin-top: -18%;
+	font-weight: 600;
+	font-size: 1.3em;
+	color: #660099;
+}
+
 .headbar .headContent .nav {
-	width: 33.3%;
+	width: 15%;
 	display: flex;
 	justify-content: right;
 }
@@ -103,9 +125,9 @@ body {
 .headbar .headContent .nav .daburger div {
 	padding: 4.2% 0%;
 	margin: 4.2% 0%;
-	background: linear-gradient(-45deg, #666, #660099, #444, #660099);
+	background: linear-gradient(-45deg, #666, #444, #660099, #990066);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 4.2s ease infinite;
 	border: .013em #660099 solid;
 	width: 75%;
 	position: relative;
@@ -119,11 +141,46 @@ body {
 .headbar .colorbar {
 	height: .42em;
 	width: 100%;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background: linear-gradient(-45deg, #666, #660099, #990066, #CC00FF);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 13s ease infinite;
 	display: inline-block;
 	margin-top: auto;
+}
+
+.description .hero {
+	background: linear-gradient(-45deg, #666, #660099, #990066, #CC00FF);
+	background-size: 400% 400%;
+	animation: gradient 13s ease infinite;
+	border: 1.3em #fff solid;
+	border-radius: 13px;
+	padding: 7em 0em;
+	margin: 4.2% 0% 0% 0%;
+}
+
+.description .hero .heroImgs {
+	display: flex;
+	padding: -1.3em 0em;
+	height: 50%;
+	justify-content: space-evenly;
+	background-color: #000;
+}
+
+.description .hero .heroImgs img {
+	width: 13em;
+	height: 13em;
+	margin: -5% 0%;
+}
+
+.options .choices {
+	display: flex;
+}
+
+.options .choices .option {
+	background-color: #fff;
+	border: 0.13em #660099 solid;
+	width: 33.3%;
+	height: 13em;
 }
 
 @keyframes gradient {

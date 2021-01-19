@@ -9,46 +9,46 @@ var burgerNav = document.createElement('nav');
 var burgerUl = document.createElement("ul");
 var activeButt = document.querySelector(".activeButt");
 var navLink = document.querySelectorAll('nav li a');
+var description = document.querySelector(".description");
 
 var toggleBurger = function toggleBurger() {
   if (burgerButt.id != "open") {
     burgerButt.id = "open";
     console.log("Burger now " + burgerButt.id);
-    burgerButt.style.borderLeft = ".13em #fff solid";
-    burgerButt.style.borderBottom = ".13em #fff solid";
     mid.style.opacity = "0%";
-    mid.style.webkitTransition = "1.3s ease";
-    bottBun.style.transform = "rotate(45deg)";
-    bottBun.style.webkitTransition = "1.3s ease";
+    mid.style.webkitTransition = ".42s ease";
+    bottBun.style.transform = "translate(0em,-1.35em) rotate(45deg)";
+    bottBun.style.webkitTransition = ".42s ease";
     bottBun.style.zIndex = "3";
     bottBun.style.position = "relative";
-    bottBun.style.top = "1%";
-    topBun.style.transform = "rotate(-45deg)";
-    topBun.style.webkitTransition = "1.3s ease";
+    topBun.style.transform = "translate(0em,1.2em) rotate(-45deg)";
+    topBun.style.webkitTransition = ".42s ease";
     topBun.style.position = "relative";
-    topBun.style.bottom = "-25%";
     burgerBar.style.width = "10em";
     burgerBar.style.height = "fitContent";
     burgerBar.style.position = "absolute";
+    burgerBar.style.right = "0%";
     burgerBar.style.background = '#a0a0a0';
     burgerBar.style.zIndex = "1";
     burgerBar.style.border = ".13em #fff solid";
     burgerBar.setAttribute("class", "burgerBar");
     burgerBar.style.textTransform = "capitalize";
     burgerBar.style.textAlign = 'center';
-    document.body.appendChild(burgerBar);
+    burgerUl.style.display = "flex";
+    burgerUl.style.flexDirection = "column";
+    burgerUl.setAttribute("class", "burgerUl");
+    document.body.insertBefore(burgerBar, description);
     burgerBar.appendChild(burgerNav);
     burgerNav.appendChild(burgerUl);
 
-    for (z = 0; z < navLink.length; z++) {
+    for (var z = 0; z < navLink.length; z++) {
       navLink[z].style.textDecoration = "none";
       navLink[z].style.color = "#fff";
       navLink[z].style.border = 'none';
       navLink[z].style.borderBottom = '.013em purple solid';
-      navLink[z].style.padding = '9.4% 24% 9.4% 16%';
+      navLink[z].style.padding = "1em 1.3em";
+      navLink[z].style.marginLeft = "-33%";
       burgerUl.appendChild(navLink[z]); // activeButt.style.padding = '9.4% 24% 9.4% 16%'
-
-      activeButt.style.marginLeft = "-27%";
     }
   } else if (burgerButt.id != "close") {
     burgerButt.id = "close";
@@ -59,7 +59,6 @@ var toggleBurger = function toggleBurger() {
     topBun.style.bottom = "";
     mid.style.opacity = "100%";
     document.body.removeChild(burgerBar);
-    burgerButt.style.border = ".0013em purple solid";
   }
 };
 
@@ -70,13 +69,13 @@ burgerButt.addEventListener("click", function (e) {
 
 var cartButt = document.querySelector('.cartButt');
 var cartTotal = document.querySelector(".cartTotal");
-cartCount = 0;
+var cartCount = 0;
 cartTotal.innerText = cartCount;
 var cartMenu = document.createElement("div");
 var cmUl = document.createElement('ul');
 var product = document.querySelectorAll(".product");
 
-for (p = 0; p < product.length; p++) {
+for (var p = 0; p < product.length; p++) {
   product[p].addEventListener("click", function (e) {
     e.preventDefault();
     console.log("you added a product");
@@ -91,6 +90,7 @@ var toggleCartMenu = function toggleCartMenu() {
     cartMenu.style.backgroundColor = "rgba(255, 255, 255, .42)";
     cartMenu.style.border = ".13em rgba(.0, .0, .0, .42) solid";
     cartMenu.style.width = "10em";
+    cartMenu.style.right = "0%";
     cartMenu.style.height = "fitContent";
     cartMenu.style.position = "absolute";
     document.body.appendChild(cartMenu);
