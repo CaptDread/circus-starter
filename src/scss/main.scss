@@ -101,11 +101,13 @@ $secondary-text: #666;
 				width: 7em;
 				align-items: center;
 				height: 5em;
-				margin: 1.3%;
 				background-color: #fff;
 				border: .13em $primary-color solid;
+				border-top: none;
+				border-bottom: none;
 				display: flex;
 				flex-direction: column;
+				margin-left: auto;
 				
 
 				div{
@@ -117,6 +119,7 @@ $secondary-text: #666;
 					border: .013em #660099 solid;
 					width: 75%;
 					position: relative;
+					animation: normal 13s ease;
 				}
 				.topbun{
 					margin-top: 13%;
