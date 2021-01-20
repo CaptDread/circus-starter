@@ -32,30 +32,19 @@ background: variables.$primary-color;
 
 body {
 	background: rgb(46, 48, 50);
+	margin: 0%;
 }
 
 .wrap{
-	background-color: #fff;
 	margin: 0% 15%;
 }
 
 /* 2. Content ================================= */
 
-$primary-color: #660099;
-$secondary-color: #666 ;
-$auxilary-color: #fff;
-
-$primary-text: #000;
-$secondary-text: #666;
-
-$hFont: 'Titillium Web', sans-serif;
-$pFont: 'Lato', sans-serif;
-
 .headbar{
-	background-color: $auxilary-color;
+	background-color: variables.$auxilary-color;
 	height: fit-content;
 	display: flex;
-	margin: -4.2px -5px;
 	display: flex;
 	flex-direction: column;
 
@@ -63,6 +52,7 @@ $pFont: 'Lato', sans-serif;
 		display: flex;
 		justify-content: space-between;
 		flex: 3;
+		font-family: variables.$hFont;
 
 
 		.headLogo{
@@ -73,6 +63,7 @@ $pFont: 'Lato', sans-serif;
 
 			.logoLink{
 				padding-top: .42em;
+				z-index: 3;
 	
 				.dreadlogo{
 					margin-left: 1.3em;
@@ -88,6 +79,7 @@ $pFont: 'Lato', sans-serif;
 			justify-items: right;
 			align-items: center;
 			padding-top: 1.3em;
+			z-index: 2;
 			
 			img{
 				width: 3em;
@@ -101,10 +93,10 @@ $pFont: 'Lato', sans-serif;
 					display: flex;
 					.cartCount{
 						margin-left: -42%;
-						margin-top: -18%;
+						margin-top: -26%;
 						font-weight: 600;
 						font-size: 1.3em;
-						color: $primary-color;
+						color: variables.$primary-color;
 					}
 				}
 			}
@@ -119,11 +111,11 @@ $pFont: 'Lato', sans-serif;
 			.daburger{
 				width: 7em;
 				align-items: center;
-				height: 5em;
-				background-color: $auxilary-color;
-				border: .13em $primary-color solid;
+				background-color: variables.$auxilary-color;
+				border: .13em variables.$primary-color solid;
 				border-top: none;
 				border-bottom: none;
+				justify-content: center;
 				display: flex;
 				flex-direction: column;
 				margin-left: auto;
@@ -164,10 +156,10 @@ $pFont: 'Lato', sans-serif;
 		background: linear-gradient(-45deg,  #666, #660099, #990066, #CC00FF);
 		background-size: 400% 400%;
 		animation: gradient 13s ease infinite;
-		border: 1.3em $auxilary-color solid;
+		border: 1.3em variables.$auxilary-color solid;
 		border-radius: 13px;
 		padding: 7em 0em;
-		margin: 4.2% 0% 0% 0%;
+		margin: 4.2% 1.3%;
 		overflow: hidden;
 
 		.heroImgs{
@@ -175,13 +167,14 @@ $pFont: 'Lato', sans-serif;
 			padding: -1.3em 0em;
 			height: 50%;
 			justify-content: space-evenly;
-			background-color: $primary-text;
+			background-color: variables.$primary-text;
 
 
 			img{
 				width: 13em;
 				height: 13em;
 				margin: -5% 0%;
+
 			}
 			.skull1{
 				transform: rotateY(180deg);
@@ -204,20 +197,131 @@ $pFont: 'Lato', sans-serif;
 		flex-direction: column;
 
 		.option{
-			background-color: $auxilary-color;
-			border: .13em $primary-color solid;
+			background-color: variables.$auxilary-color;
+			border: .42em variables.$primary-color solid;
+			border-radius: 13px;
 			display: flex;
 			flex-direction: column;
-			padding: 1.3em;
-			margin: 7% 0%;
+			margin: 9% 0%;
+			text-align: center;
+			align-items: center;
+			
+
+			.tagHolder{
+				display: flex;
+				position: relative;
+				width: 60%;
+				margin-right: auto;
+				
+
+				.tag{
+					position: absolute;
+					margin-top: -.66%;
+					margin-bottom: auto;
+					margin-left: -1.3%;
+					width: max-content;
+					background: linear-gradient(-45deg, #666, #444, #660099, #990066);
+					background-size: 400% 400%;
+					animation: gradient 4.2s ease infinite;
+					color: variables.$auxilary-color;
+					text-shadow: 0 0 3px variables.$primary-text;
+					padding: 0em .42em;
+					border-radius: 13px;
+					border: .42em variables.$primary-color solid;
+				}
+			}
+
+			img{
+				transform: rotateY(180deg);
+				width: 6.66em;
+				align-self: center;
+				margin-top: -17%;
+
+				@include mixins.bp-m {
+					margin-top: -13%;
+				}
+			}
+
+			.h3{
+				margin-top: -13%;
+				font-family: variables.$hFont;
+			}
+
+			.desc{
+				font-family: variables.$pFont;
+				line-height: 1.3;
+				word-spacing: .13em;
+				font-size: 24px;
+
+				span{
+					text-transform: capitalize;
+				}
+
+				ul{
+					text-align: left;
+					text-transform: capitalize;
+					font-size: 18px;
+
+
+
+					li{
+						line-height: 1.5;
+						letter-spacing: .1em;
+					}
+					div{
+						line-height: 1.5;
+						letter-spacing: .1em;
+					}
+				}
+			}
+			
 
 			button{
 				margin-top: auto;
-
+				font-family: variables.$pFont;
+				background: linear-gradient(-45deg,  #666, #660099, #990066, #CC00FF);
+				background-size: 400% 400%;
+				animation: gradient 13s ease infinite;
+				color: variables.$auxilary-color;
+				text-shadow: 0 0 3px variables.$primary-text;
+				text-transform: capitalize;
+				width: fit-content;
+				border: .13em variables.$primary-text solid;
+				border-radius: 13px;
+				padding: 1.3em;
+				margin-bottom: 1.3%;
 			}
 		}
 	}
 }
+
+
+footer{
+    display: flex;
+    justify-content: center;
+	padding: 10px 10px;
+	background:#fff;
+    align-items: center;
+    font-size: .75em;
+    justify-content: space-between;
+	bottom: 0%;
+	
+	ul{
+		display: flex;
+		
+		li{
+			margin:0px 2px;
+			list-style-type: none;
+		}
+		
+		img{
+			width: 4em;
+			height: 4em;
+		}
+	}
+}
+
+
 
 
 // gradient

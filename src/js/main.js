@@ -17,11 +17,11 @@ var toggleBurger = function toggleBurger() {
     console.log("Burger now " + burgerButt.id);
     mid.style.opacity = "0%";
     mid.style.webkitTransition = ".42s ease";
-    bottBun.style.transform = "translate(0em,-1.35em) rotate(45deg)";
+    bottBun.style.transform = "translate(0em,-.85em) rotate(45deg)";
     bottBun.style.webkitTransition = ".42s ease";
     bottBun.style.zIndex = "3";
     bottBun.style.position = "relative";
-    topBun.style.transform = "translate(0em,1.2em) rotate(-45deg)";
+    topBun.style.transform = "translate(0em,1em) rotate(-45deg)";
     topBun.style.webkitTransition = ".42s ease";
     topBun.style.position = "relative";
     burgerBar.style.width = "10em";
