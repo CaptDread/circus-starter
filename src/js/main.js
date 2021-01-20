@@ -80,7 +80,7 @@ var _loop = function _loop(z) {
     tipDiv.setAttribute(`style`, 'top:'+topPos+'px;'+'left:'+leftPos+'px;')
     var tipOrgin = topPos - (z * 50) - 250;
     gsap.from( `.tipDiv`, { 
-      duration: 1.3,
+      duration: .5,
       ease: "none",
       y: tipOrgin,
       scale: 0,
@@ -92,7 +92,7 @@ var _loop = function _loop(z) {
     this.tipData = ``;
     this.removeAttribute(`tooltip`);
     gsap.to( `.tipDiv`, { 
-      duration: 1,
+      duration: .42,
       ease: "none",
       y: 66.6,
       scale: 0,
@@ -100,7 +100,7 @@ var _loop = function _loop(z) {
       });
     setTimeout(() => {
       document.querySelector(`.tipDiv`).remove();
-    }, 420);
+    }, 42);
   });
 };
 
