@@ -156,6 +156,7 @@ body {
 	border-radius: 13px;
 	padding: 7em 0em;
 	margin: 4.2% 0% 0% 0%;
+	overflow: hidden;
 }
 
 .description .hero .heroImgs {
@@ -172,6 +173,10 @@ body {
 	margin: -5% 0%;
 }
 
+.description .hero .heroImgs .skull1 {
+	transform: rotateY(180deg);
+}
+
 .options .choices {
 	display: flex;
 	flex-direction: column;
@@ -180,7 +185,14 @@ body {
 .options .choices .option {
 	background-color: #fff;
 	border: 0.13em #660099 solid;
-	height: 42em;
+	display: flex;
+	flex-direction: column;
+	padding: 1.3em;
+	margin: 7% 0%;
+}
+
+.options .choices .option button {
+	margin-top: auto;
 }
 
 @keyframes gradient {

@@ -44,6 +44,7 @@ var toggleBurger = function toggleBurger() {
     for (var z = 0; z < navLink.length; z++) {
       navLink[z].style.textDecoration = "none";
       navLink[z].style.color = "#fff";
+      navLink[z].style.textShadow = "0 0 3px #660099, 0 0 3px #660099, 0 0 3px #660099, 0 0 3px #660099";
       navLink[z].style.border = 'none';
       navLink[z].style.borderBottom = '.013em purple solid';
       navLink[z].style.padding = "1em 1.3em";
@@ -87,16 +88,18 @@ var toggleCartMenu = function toggleCartMenu() {
     cartButt.id = "open";
     cartMenu.setAttribute('class', 'cartMenu');
     cmUl.setAttribute('class', 'manuel');
-    cartMenu.style.backgroundColor = "rgba(255, 255, 255, .42)";
-    cartMenu.style.border = ".13em rgba(.0, .0, .0, .42) solid";
+    cartMenu.style.backgroundColor = "#666";
+    cartMenu.style.border = ".13em rgba(.0, .0, .0, 1) solid";
     cartMenu.style.width = "10em";
     cartMenu.style.right = "0%";
     cartMenu.style.height = "fitContent";
     cartMenu.style.position = "absolute";
-    document.body.appendChild(cartMenu);
+    document.body.insertBefore(cartMenu, description);
     cmUl.style.display = "flex";
     cmUl.style.flexDirection = "column";
+    cmUl.style.listStyleType = "none";
     cmUl.style.color = "#fff";
+    cmUl.style.textShadow = "0 0 3px #660099, 0 0 3px #660099, 0 0 3px #660099, 0 0 3px #660099";
     cartMenu.appendChild(cmUl);
 
     if (cartCount < 1) {
@@ -108,9 +111,9 @@ var toggleCartMenu = function toggleCartMenu() {
 
       var emptyLi = document.createElement("li");
       emptyLi.setAttribute("class", "emptyLi");
-      emptyLi.style.height = "4.2em";
+      emptyLi.style.height = "fitContent";
       var emptyLiP = document.createElement("p");
-      emptyLiP.innerText = "There's nothing here, click an image to add it to the cart!";
+      emptyLiP.innerText = "There's nothing here, click an option to add it to the cart!";
       cmUl.appendChild(emptyLi);
       emptyLi.appendChild(emptyLiP);
     } else {

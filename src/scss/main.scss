@@ -48,6 +48,9 @@ $auxilary-color: #fff;
 $primary-text: #000;
 $secondary-text: #666;
 
+$hFont: 'Titillium Web', sans-serif;
+$pFont: 'Lato', sans-serif;
+
 .headbar{
 	background-color: $auxilary-color;
 	height: fit-content;
@@ -165,6 +168,7 @@ $secondary-text: #666;
 		border-radius: 13px;
 		padding: 7em 0em;
 		margin: 4.2% 0% 0% 0%;
+		overflow: hidden;
 
 		.heroImgs{
 			display: flex;
@@ -178,6 +182,12 @@ $secondary-text: #666;
 				width: 13em;
 				height: 13em;
 				margin: -5% 0%;
+			}
+			.skull1{
+				transform: rotateY(180deg);
+			}
+			.skull3{
+				transform: rotateY(180deg);
 			}
 		}
 
@@ -196,14 +206,15 @@ $secondary-text: #666;
 		.option{
 			background-color: $auxilary-color;
 			border: .13em $primary-color solid;
-			height: 13em;
 			display: flex;
 			flex-direction: column;
+			padding: 1.3em;
+			margin: 7% 0%;
 
-
-			.optButt(
+			button{
 				margin-top: auto;
-			)
+
+			}
 		}
 	}
 }
